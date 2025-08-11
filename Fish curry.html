@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #fff8f3 0%, #ffe0d2 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #ff7043 60%, #ffab91 100%);
+    color: white;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(255,112,67,0.1);
+}
+
+header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0.5rem;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #fff;
+    color: #ff7043;
+    text-decoration: none;
+}
+
+main {
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.featured h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: #ff7043;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
+}
+
+article {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(255,112,67,0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255,112,67,0.18), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 8px rgba(255,112,67,0.08);
+    height: 170px;
+    object-fit: cover;
+}
+
+figcaption {
+    font-weight: bold;
+    color: #ff7043;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+article a {
+    background: #ff7043;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 1px 4px rgba(255,112,67,0.08);
+}
+
+article a:hover {
+    background: #ffab91;
+    color: #ff7043;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    main {
+        padding: 1rem;
+    }
+    .featured h2 {
+        font-size: 1.4rem;
+    }
+    .recipe-grid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+<header>
+    <h1>Delicious Recipes</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html" class="active">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2> Fish curry</h2>
+        <figure>
+            <img src="fish curry.jpg" width="150" height="170" alt="Chocolate Cake">
+            <figcaption>Kottayam Fish curry</figcaption>
+        </figure>
+        <section>
+            <h3>Ingredients</h3>
+           
+<ul>
+  <li>500 g (about 1 lb) fresh fish pieces (seer fish, pearl spot, or mackerel work well)</li>
+  <li>2 tbsp coconut oil</li>
+  <li>1 tsp mustard seeds</li>
+  <li>1–2 sprigs curry leaves</li>
+  <li>1 medium onion or shallots, sliced (optional, some Kottayam recipes skip onion)</li>
+  <li>2–3 green chilies, slit</li>
+  <li>1–2 tsp ginger, crushed</li>
+  <li>1–2 tsp garlic, crushed</li>
+  <li>2 medium tomatoes, chopped</li>
+  <li>½ tsp fenugreek seeds (uluva)</li>
+  <li>1 tsp turmeric powder</li>
+  <li>2–3 tbsp red chili powder (adjust for spice level)</li>
+  <li>1½–2 tbsp coriander powder</li>
+  <li>½–1 tsp black pepper powder (optional)</li>
+  <li>1 cup water (adjust consistency)</li>
+  <li>1–2 tbsp kudampuli (gambooge), soaked in ½ cup warm water</li>
+  <li>Salt, to taste</li>
+  <li>Fresh curry leaves (for garnish)</li>
+  <li>A drizzle of coconut oil (for garnish)</li>
+</ul>
+        </section>
+        <section>
+            <h3>Instructions</h3>
+            <ol>
+                  <li>Wash the kudampuli pieces and soak them in warm water for 15–20 minutes.</li>
+                  <li>Keep both the water and soaked kudampuli for later use.</li>
+                  <li>In a clay pot (manchatti) or heavy-bottomed pan, heat coconut oil over medium heat.</li>
+                  <li>Add mustard seeds and let them splutter.</li>
+                  <li>Add fenugreek seeds and sauté for a few seconds until aromatic.</li>
+                  <li>Add curry leaves, green chilies, and (optional) sliced onions or shallots.</li>
+                  <li>Sauté until the onions turn light golden.</li>
+                  <li>Add crushed ginger and garlic, sauté until the raw smell goes away.</li>
+                  <li>Lower the heat to avoid burning the spices.</li>
+                  <li>Add turmeric powder, red chili powder, coriander powder, and black pepper powder (if using).</li>
+                  <li>Stir well for 30–40 seconds until fragrant.</li>
+                  <li>Add chopped tomatoes and cook until they soften and blend into the spices.</li>
+                  <li>Add the soaked kudampuli along with its water.</li>
+                  <li>Pour in about 1 cup of water (adjust for desired consistency).</li>
+                  <li>Bring to a gentle boil.</li>
+                  <li>Carefully place fish pieces into the curry.</li>
+                  <li>the pan gently instead of stirring to avoid breaking the fish.</li>
+                  <li>Cover and cook for 8–10 minutes until fish is cooked through.</li>
+                  <li>Turn off the heat. Add a drizzle of coconut oil and a few fresh curry leaves on top.</li>
+                  <li>Let the curry rest for at least 30 minutes before serving — this helps the flavors develop.</li>
+                  <li> Let the curry rest for at least 30 minutes before serving — this helps the flavors develop.</li>
+                  <li>Serve hot with steamed rice, kappa (tapioca), or appam.</li>
+                </ol>
+                
+            
+        </section>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2025 Delicious Recipes | All Rights Reserved</p>
+</footer>
+</body>
+</html>
+
